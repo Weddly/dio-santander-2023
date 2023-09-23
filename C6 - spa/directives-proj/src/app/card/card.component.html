@@ -1,0 +1,39 @@
+<h1>My Products</h1>
+<p *ngIf="false">card works!</p>
+
+<ul>
+  <li *ngFor="let p of products; let i = index"
+    (click)="remove(i)"
+  >{{i}} - {{p}}</li>
+  <button (click)="add()">Add product</button>
+</ul>
+
+<div [ngSwitch]="menuType">
+  <div *ngSwitchCase="'user'" >
+    <ul>
+      <li>Profile edit</li>
+      <li>Add card</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'admin'" >
+    <ul>
+      <li>Profile edit</li>
+      <li>Add card</li>
+      <li>Manage users</li>
+    </ul>
+  </div>
+  <div *ngSwitchCase="'superUser'" >
+    <ul>
+      <li>Profile edit</li>
+      <li>Add card</li>
+      <li>Manage users</li>
+      <li>Manage admins</li>
+    </ul>
+  </div>
+  <div *ngSwitchDefault>
+    <ul>
+      <li>Access Denied</li>
+    </ul>
+  </div>
+
+</div>

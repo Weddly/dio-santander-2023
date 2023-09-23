@@ -1,0 +1,30 @@
+<ng-content select="h2"></ng-content>
+
+<p [ngClass]="fontStyle">comp-attribute works!</p>
+<button (click)="setStyle()">Enable/Disable</button>
+
+<h1 [ngStyle]="{'background':bgColor, 'color':fontColor}">Angular Course</h1>
+
+<hr>
+
+<h1>Grocery List</h1>
+<p>Add an item</p>
+<input type="text" [(ngModel)]="item" (keyup.enter)="addList()">
+<p>{{item}}</p>
+<ul>
+<li *ngFor="let i of list">{{i}}</li>
+</ul>
+
+<ng-template [ngIf]="list.length > 0">
+  <button (click)="cleanList()">Clean list</button>
+</ng-template>
+
+<ng-template ngIf="isEnabledBlock">
+  <a href="#">Add to cart</a>
+</ng-template>
+
+<hr>
+
+<ng-content select="p"></ng-content>
+
+

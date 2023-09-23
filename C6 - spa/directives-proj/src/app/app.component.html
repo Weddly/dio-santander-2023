@@ -1,0 +1,15 @@
+<app-comp-attribute>
+  <h2>Hello</h2>
+  <p>I'm from outside</p>
+</app-comp-attribute>
+
+<app-card *ngIf="isAlivedCard; else anotherBlock"></app-card>
+
+<ng-template #anotherBlock>
+  <p>Ng template secret block</p>
+</ng-template>
+<hr>
+<h2>Module import example</h2>
+<app-list-view></app-list-view>
+
+<router-outlet></router-outlet>
