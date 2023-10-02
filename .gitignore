@@ -931,3 +931,9 @@ C2 - typescript-for-angular/node_modules/yn/readme.md
 C3 - angular-ecosystem
 C4 - angular-components
 
+C7 - angular-routes/Routes/.vscode/extensions.json
+C7 - angular-routes/Routes/.vscode/launch.json
+C7 - angular-routes/Routes/.vscode/tasks.json
+C8 - services/Services/.vscode/extensions.json
+C8 - services/Services/.vscode/launch.json
+C8 - services/Services/.vscode/tasks.json
